@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0f172a">
+
+    <HorizontalScrollView
+        android:id="@+id/tabScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#1e293b"
+        android:scrollbars="none"
+        android:fillViewport="false">
+        <LinearLayout
+            android:id="@+id/tabStrip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#0f172a"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#94a3b8"
+            android:contentDescription="后退"/>
+
+        <ImageButton
+            android:id="@+id/btnForward"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_forward"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#94a3b8"
+            android:contentDescription="前进"/>
+
+        <EditText
+            android:id="@+id/addressBar"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/address_bar_bg"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="#e2e8f0"
+            android:textColorHint="#64748b"
+            android:hint="搜索或输入网址"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:selectAllOnFocus="true"/>
+
+        <ImageButton
+            android:id="@+id/btnNewTab"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_add"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#94a3b8"
+            android:contentDescription="新标签"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:max="100"
+        android:progressTint="#3b82f6"
+        android:progressBackgroundTint="#1e293b"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/webViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
